@@ -1,0 +1,52 @@
+.content-Total {
+  display: block;
+  justify-content: space-between;
+}
+.content-page {
+  width: 100%;
+  display: flex;
+}
+
+.main-content {
+  width: 90%;
+  border-radius: 12px;
+  border: 2px solid #7cb342;
+  align-items: end;
+}
+header {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .content-NAV {
+    width: 0%;
+  }
+
+  .main-content {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #7cb342;
+  }
+  .content-setions {
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-content {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-content {
+    width: 100%;
+    border-radius: 12px;
+  }
+}

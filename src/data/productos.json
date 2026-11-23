@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Banano",
+    "descripcion": "Plátanos de postre o dulces, para comer principalmente crudos, con gran parte de su fécula convertida en azúcar, destacando la variedad cavendish, que representa aproximadamente el 47 % de la producción mundial.",
+    "precio1": 10000,
+    "precio2": 20000,
+    "precio3": 30000,
+    "categoria": "Frutas",
+    "stock": 15,
+    "imagen": "https://d31f1ehqijlcua.cloudfront.net/n/1/d/d/a/1dda4bd5693e642fc90e7e6bf09d457e017fd79e_FruitsandVegetables_285917_01.jpg",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Manzana",
+    "descripcion": "La manzana es una fruta que puede ayudar a disminuir el riesgo de enfermedades cardiovasculares y diabetes, combatir el estreñimiento, prevenir el envejecimiento prematuro y favorecer la pérdida de peso.",
+    "precio1": 7900,
+    "precio2": 15900,
+    "precio3": 12099,
+    "categoria": "Frutas",
+    "stock": 8,
+    "imagen": "https://www.gastronomiavasca.net/uploads/image/file/3390/manzana.jpg",
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "nombre": "Frijol rojo",
+    "descripcion": "Acompañamiento: En la cocina colombiana se sirven comúnmente con arroz blanco, huevo frito, aguacate, plátano maduro o integrados en la tradicional bandeja paisa.",
+    "precio1": 7000,
+    "precio2": 9000,
+    "precio3": 10100,
+    "categoria": "Granos",
+    "stock": 25,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8GbpSzyrwV-TimRKTizihEACZUSMq7L_ySJTenjvW1LQzkrxKotCVxary&s=10",
+    "destacado": false
+  },
+  {
+    "id": 4,
+    "nombre": "Platano verde",
+    "descripcion": "Si buscas comer patacones en un lugar especializado cerca de ti, puedes visitar opciones locales como Platano Mr Verdes (con sedes en centros comerciales como Oviedo y Premium Plaza)",
+    "precio1": 3550,
+    "precio2": 25000,
+    "precio3": 30000,
+    "categoria": "Verduras",
+    "stock": 12,
+    "imagen": "https://mejorconsalud.as.com/wp-content/uploads/2016/12/platanos-verdes.jpg",
+    "destacado": true
+  },
+  {
+    "id": 5,
+    "nombre": "Brocoli",
+    "descripcion": "El brócoli es una hortaliza del género Brassica, de la familia de las crucíferas, y se cultiva principalmente por su inflorescencia comestible.",
+    "precio1": 80000,
+    "precio2": 70000,
+    "precio3": 50000,
+    "categoria": "Verduras",
+    "stock": 20,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzNMVC5nb8I8TRGo0vpUXAzyG8-OKt--r8n8ZRTqMXv-LnAT-A_gkHLs7nNkZeRdSwD70HCVzgo6Xyp3RHG1ZQFOVu4ViSzNjoWRQtbUQ&s=10",
+    "destacado": false
+  },
+  {
+    "id": 6,
+    "nombre": "Leche",
+    "descripcion": "La leche es una bebida nutritiva que se obtiene de las hembras de los mamíferos y se consume principalmente como fuente de calcio y proteínas.",
+    "precio1": 15700,
+    "precio2": 18900,
+    "precio3": 20100,
+    "categoria": "Lacteos",
+    "stock": 15,
+    "imagen": "https://saludconlupa.com/media/images/Leche2.format-webp.width-640.webp",
+    "destacado": true
+  },
+  {
+    "id": 7,
+    "nombre": "Huevos",
+    "descripcion": "Los huevos son una fuente excelente de proteínas y contienen vitaminas y minerales esenciales para la salud.",
+    "precio1": 58000,
+    "precio2": 99000,
+    "precio3": 100000,
+    "categoria": "Lacteos",
+    "stock": 8,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV5EBY9elvaBXHzAroZORh83wMEMq-8MFxYTZCUHwgsQ&s=10",
+    "destacado": true
+  },
+  {
+    "id": 8,
+    "nombre": "Mango",
+    "descripcion": "El mango (llamado mangó en Puerto Rico, mangüeña en Guinea Ecuatorial,[1] y mangá en Filipinas) es el nombre de la fruta de varias especies de árboles del género Mangifera, especialmente de Mangifera indica, y sus numerosos cultivares..",
+    "precio1": 247999,
+    "precio2": 999,
+    "precio3": 10099,
+    "categoria": "Frutas",
+    "stock": 25,
+    "imagen": "https://exoticfruitbox.com/wp-content/uploads/2015/10/mango.jpg",
+    "destacado": false
+  },
+  {
+    "id": 9,
+    "nombre": "Queso",
+    "descripcion": "El queso es un alimento derivado de la leche, obtenido mediante la coagulación y curado de los productos lácteos.",
+    "precio1": 767999,
+    "precio2": 991199,
+    "precio3": 10099,
+    "categoria": "Lacteos",
+    "stock": 12,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7MED1eER-5wMHfb5mWJ_QMPlYiQXvB5Q6JbaKyB2xUA&s=10",
+    "destacado": true
+  },
+  {
+    "id": 10,
+    "nombre": "Lechuga",
+    "descripcion": "La lechuga es una hortaliza de la familia de las amarantáceas, y se cultiva principalmente por sus hojas comestibles.",
+    "precio1": 277999,
+    "precio2": 99299,
+    "precio3": "No disponible",
+    "categoria": "Verduras",
+    "stock": 20,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwz8I9DkEdNJ_zh7EA24ZBTaFiUAvMyvmRFBlsUUvog&s=10",
+    "destacado": false
+  }
+]

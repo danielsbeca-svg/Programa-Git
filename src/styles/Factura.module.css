@@ -1,0 +1,234 @@
+.Content {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- CUERPO PRINCIPAL DEL TICKET --- */
+.recibo-contenedor {
+  width: 100%;
+  max-width: 380px;
+  height: 700px;
+  background-color: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: monospace; /* Fuente de impresora térmica tradicional */
+  color: #111827;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* --- ENCABEZADO DE LA TIENDA */
+.recibo-encabezado {
+  text-align: center;
+  border-bottom: 1px dashed #111827;
+  padding-bottom: 12px;
+  line-height: 1.4;
+  justify-content: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* NUEVA CLASE: Agrupa y centra los textos horizontalmente entre sí */
+.logoTextGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el subtítulo respecto al título */
+  text-align: center;
+}
+
+.logoText {
+  font-weight: 800;
+  color: #065f46; /* Emerald-950 */
+  line-height: 1;
+  font-size: 1.2rem;
+  letter-spacing: -0.05em;
+  margin: 0; /* Quita márgenes invisibles por defecto del h1 */
+}
+
+.logoText span {
+  color: #a3e635; /* Manzana-dark */
+}
+
+.logoSubtitle {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #16a34a; /* Emerald-600 */
+  letter-spacing: 0.1em;
+  margin-top: 4px; /* Controla la distancia exacta con el título */
+  display: block; /* Asegura que respete el ancho y el centrado */
+}
+
+.logoImage {
+  align-items: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 20%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+.detalles-factura p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+/* --- DATOS RECOPILADOS DEL CLIENTE --- */
+.datos-cliente {
+  font-size: 16px;
+  line-height: 1.6;
+  border-bottom: 1px dashed #111827;
+  padding-bottom: 12px;
+}
+
+.datos-cliente p {
+  margin: 0;
+}
+
+/* Contenedor principal de la tabla */
+.tabla-productos {
+  width: 100%;
+  max-width: 500px; /* Ajusta el ancho según tu diseño */
+  font-family: Arial, sans-serif;
+}
+
+/* Regla para cada fila (cabecera y productos) */
+.fila-producto {
+  display: grid;
+  /* Define 3 columnas: la 1ª ocupa el espacio restante, la 2ª y 3ª tienen ancho fijo */
+  grid-template-columns: 1fr 80px 100px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* Alineación específica para cada columna */
+.fila-producto span:nth-child(1) {
+  text-align: left; /* Concepto a la izquierda */
+}
+
+.fila-producto span:nth-child(2) {
+  text-align: center; /* Cantidad centrada (o right si lo prefieres) */
+}
+
+.fila-producto span:nth-child(3) {
+  text-align: right; /* Total alineado a la derecha */
+}
+
+/* Estilos exclusivos para la cabecera */
+.cabecera-tabla {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+/* --- SECCIÓN DE TOTALES --- */
+.seccion-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+/* --- BOTÓN ÚNICO DE GUARDAR --- */
+.recibo-acciones {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-guardar {
+  width: 100%;
+  background-color: #70b345; /* Verde corporativo de Villa Mercedes */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.btn-guardar:hover {
+  background-color: #5da034;
+}
+
+.btn-guardar svg {
+  flex-shrink: 0;
+}
+/* Estilos específicos para cuando se imprime o exporta a PDF */
+@media print {
+  /* 1. Oculta todo el cuerpo del documento por defecto */
+  body {
+    visibility: hidden;
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Hace visible únicamente el componente de la factura y sus hijos */
+  .Content,
+  .Content * {
+    visibility: visible;
+  }
+
+  /* 3. Desactiva el diseño flotante/centrado de la pantalla y ponlo arriba a la izquierda */
+  .Content {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    transform: none !important;
+  }
+
+  /* 4. Quita el borde, la caja fija y las sombras del ticket */
+  .recibo-contenedor {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    border: none !important; /* Elimina por completo el borde */
+    border-radius: 0 !important;
+    box-shadow: none !important; /* Elimina las sombras */
+    background: white !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    overflow: visible !important;
+  }
+
+  /* 5. Oculta todos los botones (Volver, Imprimir/Descargar, etc.) */
+  button,
+  .recibo-acciones,
+  svg {
+    display: none !important;
+  }
+}

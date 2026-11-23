@@ -1,0 +1,96 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  width: 250px;
+  height: 60px;
+}
+
+/* NUEVA CLASE: Agrupa y centra los textos horizontalmente entre sí */
+.logoTextGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el subtítulo respecto al título */
+  text-align: center;
+}
+
+.logoText {
+  font-weight: 800;
+  color: #065f46;
+  line-height: 1;
+  font-size: 1rem;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.logoText span {
+  color: #a3e635; /* Manzana-dark */
+}
+
+.logoSubtitle {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #16a34a; /* Emerald-600 */
+  letter-spacing: 0.1em;
+  margin-top: 4px; /* Controla la distancia exacta con el título */
+  display: block; /* Asegura que respete el ancho y el centrado */
+}
+
+.logoIcon {
+  width: 30%;
+}
+.logoImage {
+  width: 60px;
+  height: auto;
+  border-radius: 20%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .logoIcon {
+    width: 15%;
+  }
+
+  .logoImage {
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .logoImage {
+    width: 50px;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .logoImage {
+    width: 50px;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .logoImage {
+    display: none;
+  }
+}

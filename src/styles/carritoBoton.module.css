@@ -1,0 +1,224 @@
+.carritoBoton {
+  position: relative;
+  display: inline-block;
+}
+
+.cartCounter {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #7cb342;
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  box-shadow: 0 10px 15px -3px rgba(156, 204, 101, 0.8);
+  z-index: 10; /* Asegura que el contador flote sobre el brillo */
+}
+
+/* El botón en reposo */
+.containerSvg {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ffffff;
+  border: 2px solid #7cb342;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7cb342;
+
+  /* Ajustamos la transición para que incluya todos los cambios de color y brillo */
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    filter 0.3s ease;
+  cursor: pointer;
+}
+
+.containerSvg:focus-visible,
+.closeButton:focus-visible,
+.quantityControls button:focus-visible,
+.removeButton:focus-visible {
+  outline: 3px solid #245d00;
+  outline-offset: 2px;
+}
+
+/* EFECTO HOVER: Iluminación verde sincronizada para el contenedor y el canasto interno */
+.containerSvg:hover {
+  background-color: #ffffff;
+  border-color: #7cb342;
+  color: #7cb342;
+
+  /* Brillo exterior del contenedor idéntico al de tu tarjeta */
+  box-shadow: -6px 8px 12px rgba(156, 204, 101, 0.3);
+
+  /* 1. SI USAS MATERIAL SYMBOLS (Icono de texto): Hace brillar el canasto */
+  text-shadow: 0 0 8px rgba(156, 204, 101, 0.8);
+
+  /* 2. SI USAS SVG O IMAGEN: Aplica el resplandor verde directo sobre las líneas del canasto */
+  filter: drop-shadow(0 0 6px rgba(156, 204, 101, 0.9));
+}
+
+/* Si usas SVG, nos aseguramos de que herede el color y se anime de forma fluida */
+.containerSvg svg {
+  transition:
+    filter 0.3s ease,
+    stroke 0.3s ease;
+}
+
+.containerSvg:hover svg {
+  stroke: #7cb342;
+  fill: none;
+}
+
+.cartModal {
+  width: min(680px, calc(100vw - 3rem));
+  max-height: min(75vh, 680px);
+  display: flex;
+  flex-direction: column;
+  color: #263526;
+}
+
+.cartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #d7e3d0;
+}
+
+.cartHeader h2 {
+  margin: 0;
+  color: #245d00;
+}
+
+.closeButton {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: #edf4e8;
+  color: #245d00;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.emptyCart {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.cartList {
+  display: grid;
+  gap: 0.75rem;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e3e9df;
+}
+
+.cartItem > img {
+  width: 76px;
+  height: 76px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.productInfo {
+  display: grid;
+  justify-items: start;
+  gap: 0.2rem;
+}
+
+.productInfo h3,
+.productInfo p {
+  margin: 0;
+}
+
+.productInfo h3 {
+  color: #263526;
+  font-size: 1rem;
+}
+
+.productInfo p {
+  font-size: 0.85rem;
+}
+
+.productInfo strong {
+  color: #245d00;
+  font-size: 0.9rem;
+}
+
+.quantityControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.quantityControls button {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid #7cb342;
+  border-radius: 6px;
+  background: #fff;
+  color: #245d00;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.removeButton {
+  border: 0;
+  background: transparent;
+  color: #a32626;
+  cursor: pointer;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  border-top: 2px solid #7cb342;
+  font-size: 1.1rem;
+}
+
+.cartTotal strong {
+  color: #245d00;
+}
+
+@media (max-width: 520px) {
+  .cartItem {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .cartItem > img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .removeButton {
+    grid-column: 2;
+    justify-self: start;
+  }
+}

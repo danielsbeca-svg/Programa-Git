@@ -1,0 +1,108 @@
+/* 1. Definición de variables globales (Modo Claro por defecto) */
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: linear-gradient(
+    90deg,
+    rgba(255, 250, 250, 1) 0%,
+    rgba(188, 240, 168, 1) 58%,
+    rgba(240, 242, 240, 1) 100%
+  );
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #003f14;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+}
+
+/* 2. Modo Oscuro: Solo redefinimos las variables */
+body.dark-mode {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(4, 99, 42, 1) 91%,
+    rgba(3, 143, 26, 1) 100%
+  );
+  --border: #2e303a;
+  --code-bg: #38383b;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+}
+
+/* 3. Estilos base aplicados al body (para que cubra toda la pantalla sin marcos) */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  background-attachment: fixed; /* Evita que el gradiente se corte al hacer scroll */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-h);
+}
+
+.btn-Dark-mode {
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+/* barra de scroll personalizada*/
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--code-bg);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(
+    --accent
+  ); /* Usamos --accent para que resalte más y notes el cambio al instante */
+  border-radius: 5px;
+  border: 2px solid var(--code-bg);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--text-h);
+}
+
+/* 2. Para Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--code-bg);
+}

@@ -1,0 +1,59 @@
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+}
+
+.btn-card {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #7cb342;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-card:hover:not(:disabled) {
+  background: #689f38;
+  box-shadow: 0 4px 12px rgba(104, 159, 56, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-card:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.btn-manzana {
+  background-color: var(--manzana);
+  color: var(--bosque-deep);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(138, 222, 27, 0.39);
+}
+.btn-manzana:hover {
+  background-color: var(--manzana-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.section-view {
+  display: none;
+}
+.section-view.active {
+  display: block;
+  animation: slideUp 0.5s ease-out;
+}
